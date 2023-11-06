@@ -1,0 +1,8 @@
+t1.*
+
+.idea
+venv
+dataset
+
+.env
+config.ini
