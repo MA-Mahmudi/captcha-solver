@@ -3,6 +3,7 @@ t1.*
 .idea
 venv
 dataset
+preprocessed_dataset
 
 .env
 config.ini
