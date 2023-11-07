@@ -4,6 +4,7 @@ t1.*
 venv
 dataset
 preprocessed_dataset
+train/Models
 
 .env
 config.ini
