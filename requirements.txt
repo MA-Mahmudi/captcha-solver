@@ -3,3 +3,4 @@ tensorflow==2.14.0
 matplotlib==3.8.1
 stow==1.2.2
 mltu==1.1.7
+keras==2.14.0
