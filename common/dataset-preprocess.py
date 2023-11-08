@@ -1,5 +1,9 @@
 import stow
 import tensorflow as tf
+from mltu.tensorflow.losses import CTCloss
+from mltu.tensorflow.metrics import CWERMetric
+from mltu.tensorflow.model_utils import residual_block
+
 from configs import ModelConfigs
 from mltu.dataProvider import DataProvider
 from mltu.preprocessors import ImageReader
@@ -82,3 +86,11 @@ model.compile(
     loss=CTCloss(),
     metrics=[CWERMetric()],
 )
+
+# Define callbacks
+# early_stopper = EarlyStopping(monitor='val_CER', patience=40, verbose=1)
+# checkpoint = ModelCheckpoint(f"{configs.model_path}/model.h5", monitor='val_CER', verbose=1, save_best_only=True, mode='min')
+# trainLogger = TrainLogger(configs.model_path)
+# tb_callback = TensorBoard(f'{configs.model_path}/logs', update_freq=1)
+# reduceLROnPlat = ReduceLROnPlateau(monitor='val_CER', factor=0.9, min_delta=1e-10, patience=20, verbose=1, mode='auto')
+# model2onnx = Model2onnx(f"{configs.model_path}/model.h5")
